@@ -27,7 +27,7 @@ Requirements:
 
 ## Development
 
-`yarn start` will transpile typescript and run the `dist/index.js`. Changes will trigger a rebuild
+`yarn dev` will transpile typescript and run the `dist/index.js`. Changes will trigger a rebuild
 
 ## Usage
 

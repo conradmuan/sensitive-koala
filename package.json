@@ -16,7 +16,8 @@
     "ext": "ts"
   },
   "scripts": {
-    "start": "nodemon"
+    "start": "tsc && node dist/index",
+    "dev": "nodemon"
   },
   "author": "Conrad Muan <hi@conrad.chat>",
   "license": "MIT",
