@@ -1,0 +1,33 @@
+display_information:
+  name: Sensitive Koala
+  description: Hides sensitive images behind a modal
+  background_color: "#555f7d"
+  long_description: Sensitive Koala allows workspaces such as newsrooms to safely share sensitive images in channel without disturbing coworkers. Through a global action or a message action, users can input a URL to a sensitive image and Sensitive Koala will post a button that would open the image in a modal, instead of letting Slack unfurl it.
+features:
+  bot_user:
+    display_name: Sensitive Koala
+    always_online: false
+  shortcuts:
+    - name: Add sensitive content
+      type: message
+      callback_id: add_sensitive_content_thread
+      description: Creates a modal to add a link to a sensitive image to be posted in thread
+    - name: Add sensitive content
+      type: global
+      callback_id: add_sensitive_content_channel
+      description: Creates a modal for users to add a link to a sensitive image to be posted in channel
+oauth_config:
+  redirect_urls:
+    - https://YOUR-DOMAIN.COM/slack/oauth
+  scopes:
+    bot:
+      - chat:write
+      - commands
+      - chat:write.public
+settings:
+  interactivity:
+    is_enabled: true
+    request_url: https://YOUR-DOMAIN.COM/slack/interactivity
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false

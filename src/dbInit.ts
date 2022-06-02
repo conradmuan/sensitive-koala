@@ -1,18 +1,10 @@
 import { Sequelize, DataTypes, ModelStatic } from "sequelize";
-const {
-  DB_NAME: database,
-  DB_USER: user,
-  DB_PASSWORD: password,
-  DB_HOST: host,
-} = process.env;
+const { DATABASE_URL } = process.env;
 
 export let SlackInstall: ModelStatic<any>;
 
 export const connect = async () => {
-  const sequelize = new Sequelize(database, user, password, {
-    host,
-    dialect: "postgres",
-  });
+  const sequelize = new Sequelize(DATABASE_URL);
 
   try {
     await sequelize.authenticate();
