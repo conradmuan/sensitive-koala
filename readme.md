@@ -2,14 +2,14 @@ Sensitive Koala is a Slack bot that hides sensitive images behind a modal. This 
 
 Requires users to host images outside of slack
 
-⚠️ **Caution:** This bot assumes links to images are valid. It does not validate images and will silently fail when trying to open a modal to the provided image url
+⚠️ **Caution:** This bot assumes links to images are valid. It does not validate images and will silently fail when trying to open a modal to an invalid image url
 
 ## Installation
 
 Requirements:
 
 - Setup own Slack app at https://api.slack.com/apps
-- Hosting provider with domain to run a Node with Postgres (Database is required to store OAuth tokens. No other data is stored)
+- Domain and hosting provider to run Node with Postgres (Database is required to store OAuth tokens. No other data is stored)
   - Heroku.com has a free tier with postgres as an addon
 
 ### Slack setup
