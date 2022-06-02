@@ -24,6 +24,7 @@ Requirements:
 1. Copy `.env.example` to `.env`
 2. Fill in `DATABASE_URL`
 3. Retreive your `SLACK_` secrets from your app dashboard created in the steps above
+4. In production environment, set `NODE_ENV` to `production`
 
 ## Development
 

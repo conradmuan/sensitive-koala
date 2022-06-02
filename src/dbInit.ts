@@ -1,10 +1,17 @@
 import { Sequelize, DataTypes, ModelStatic } from "sequelize";
-const { DATABASE_URL } = process.env;
+const { DATABASE_URL, NODE_ENV } = process.env;
 
 export let SlackInstall: ModelStatic<any>;
 
+const dialectOptions = NODE_ENV !== "development" && {
+  ssl: {
+    require: true,
+    rejectUnauthorized: false, // bug see: https://github.com/sequelize/sequelize/issues/12393
+  },
+};
+
 export const connect = async () => {
-  const sequelize = new Sequelize(DATABASE_URL);
+  const sequelize = new Sequelize(DATABASE_URL, { dialectOptions });
 
   try {
     await sequelize.authenticate();
