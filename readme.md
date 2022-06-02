@@ -12,7 +12,7 @@ Requirements:
 - Hosting provider with domain to run a Node with Postgres (Database is required to store OAuth tokens. No other data is stored)
   - Heroku.com has a free tier with postgres as an addon
 
-### Slack Setup
+### Slack setup
 
 1. Visit https://api.slack.com/apps and create a new app from **Manfiest**
 2. Select development workspace
@@ -26,9 +26,11 @@ Requirements:
 3. Retreive your `SLACK_` secrets from your app dashboard created in the steps above
 4. In production environment, set `NODE_ENV` to `production`
 
-## Development
+### Final installation steps
 
-`yarn dev` will transpile typescript and run the `dist/index.js`. Changes will trigger a rebuild
+1. In the Slack app dashboard, click on Manage Distribution (URL looks like https://api.slack.com/apps/YOUR-APP-ID/install-on-team)
+2. Copy the sharable URL and paste it into the browser
+3. Complete the OAuth flow to install this app on your team
 
 ## Usage
 
@@ -51,3 +53,7 @@ Requirements:
 5. A button to open a modal will be posted in Thread
 
 ![Message Action](./assets/sensitive-koala-thread.gif)
+
+## Development
+
+`yarn dev` will transpile typescript and run the `dist/index.js`. Changes will trigger a rebuild
