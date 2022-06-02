@@ -16,7 +16,7 @@
     "ext": "ts"
   },
   "scripts": {
-    "start": "yarn tsc && node dist/index",
+    "start": "npm tsc && node dist/index",
     "dev": "nodemon"
   },
   "author": "Conrad Muan <hi@conrad.chat>",
